@@ -1,0 +1,42 @@
+
+package main;
+
+import java.util.Scanner;
+
+
+public class Main {
+//Ler três valores do teclado e dizer se eles formam um triângulo. Caso afirmativo, dizer seu 
+    tipo (equilátero, isósceles ou escaleno).
+  
+    public static void main(String[] args) {
+       Scanner input = new Scanner(System.in);
+       float val1=0, val2=0, val3=0;
+       
+        System.out.println("Digite o valor do segmento 1");
+                  val1 = input.nextInt();
+        System.out.println("Digite o valor do segmento 2");
+                  val2 = input.nextInt();
+        System.out.println("Digite o valor do segmento 3");
+                  val3 = input.nextInt();
+       
+       if (val1 + val2 > val3 && val1 + val3 > val2 && val2 + val3 > val1){
+        System.out.println("Com esses valores é possivel formar um triângulo"
+                         + "\n Além pelos valores consegue-se se saber o tipo de triângulo: \n");
+        
+            if (val1 == val2 && val1 == val3){
+        System.out.println("Os 3 lados são iguais e suficientes logo consegue se formar um triângulo equilátero ");
+        }
+            else if(val1 == val2 || val1 == val3 || val2 == val3){
+        System.out.println("Os 2 lados são iguais e suficientes logo consegue se formar um triângulo isóceles   ");
+        }
+            else {
+        System.out.println("Os 3 lados são diferentes mas suficientes para se formar um triângulo escaleno  ");
+        }
+     }   
+       else {
+        System.out.println("Os 3 lados não suficientes para formação de um triângulo ;-;");
+       }
+       
+    }
+    
+}

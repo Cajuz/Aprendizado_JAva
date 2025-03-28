@@ -1,0 +1,25 @@
+package main;
+
+import java.util.Scanner;
+
+
+public class Main {
+
+    
+    public static void main(String[] args) {
+        Scanner grava = new Scanner(System.in);
+        int c=1,f=50, x=0;
+        
+                      
+        while(x < 1){
+            while(f <= 150){
+             c= 5*(f-32)/9;
+             System.out.println(f+"ºF = "+c+"ºC \n");
+             f++;
+            }
+            x++;
+        }
+         
+           
+    }
+}

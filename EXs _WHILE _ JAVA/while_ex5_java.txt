@@ -1,0 +1,15 @@
+package main;
+
+
+public class Main {
+
+    
+    public static void main(String[] args) {
+        int valor= 150;
+        
+        while(valor >= 150 && valor <=200){
+                System.out.println(valor);
+        valor= valor + 1;    
+        }       
+    }
+}

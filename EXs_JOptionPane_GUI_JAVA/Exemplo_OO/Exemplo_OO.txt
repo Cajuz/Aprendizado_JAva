@@ -1,0 +1,69 @@
+package Controller;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import javax.swing.JOptionPane;
+
+
+public class Func_DAO {
+    
+    public static void ex1_Calcl(){
+/*Crie uma classe com o nome Calc1 e faça a seguinte operação:
+        Solicite ao usuário as seguintes informações :
+nome / peso / altura 
+        
+use a fórmula do IMC :  
+        peso/altura * altura 
+Forneça o resultado ao usuário. */
+        String nome = JOptionPane.showInputDialog(null, "Digite seu nome", "", 3) ;
+        String altura = JOptionPane.showInputDialog(null, "Digite sua altura em metros", "", 3);
+                double valor = Double.parseDouble(altura);
+        String peso = JOptionPane.showInputDialog(null, "Digite seu peso em KG", "", 3) ;
+                int valor2 = Integer.parseInt(peso);
+                
+        double imc = valor2/(valor * valor);
+        BigDecimal bd = new BigDecimal(imc).setScale(2, RoundingMode.HALF_EVEN);
+        
+        JOptionPane.showMessageDialog(null, "Seu IMC (Índice de Massa Corporal) é igual á "+ bd,"", 1);
+        
+        
+    }
+    
+    public static void ex2_Gasto(){
+ /*Crie uma classe chamada gasto e faça a seguinte operação :
+        Calcule quantos kilometros um carro faz por litro , utilizando a 
+seguinte função :
+        Litros = Km Percorrido / Tempo */
+       String km = JOptionPane.showInputDialog(null, "Digite quantos KM seu carro rodou", "", 3) ;
+                double valor = Double.parseDouble(km);
+        String tempo = JOptionPane.showInputDialog(null, "Agora o tempo que você gastou em horas", "", 3);
+                double valor2 = Double.parseDouble(tempo);
+        
+                
+        double litros =  valor/ valor2;
+        BigDecimal bd = new BigDecimal(litros).setScale(1, RoundingMode.HALF_EVEN);
+        
+        JOptionPane.showMessageDialog(null, "Seu carro gastou " + bd+" litros","", 1);
+    }
+    
+    public static void ex3_Informacão(){
+ /* Crie uma classe chamada Informação e faça a seguinte operação :
+       Solicite o nome do usuário , peça a sua idade e forneça a seguinte informação :
+Quantos dias ela viveu .
+Quantas horas ela viveu. */
+        String nome = JOptionPane.showInputDialog(null, "Digite seu nome", "", 3) ;
+        String idade = JOptionPane.showInputDialog(null, "Informe a sua idade", "", 3);
+                int valor = Integer.parseInt(idade);
+      
+                
+        int dias = valor * 360;
+        int horas = valor * 8640;
+        
+        JOptionPane.showMessageDialog(null,"Voc está vivo a "+ dias + " dias \n ou \n" + horas + " horas","", 1);
+    }
+    
+    
+}
+
+
+

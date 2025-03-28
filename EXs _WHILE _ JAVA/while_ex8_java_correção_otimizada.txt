@@ -1,0 +1,32 @@
+//Solicite ao usuário 3 números e ordene do menor para o maior apennas com IF ELSE /  WHILE
+ 
+public class Main {
+ 
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner grava = new Scanner(System.in);
+        int a, b , c, t, cont=0;
+
+        System.out.println("Digite o primeiro valor");
+        a = grava.nextInt();
+        System.out.println("Digite o segundo valor");
+        b = grava.nextInt();
+        System.out.println("Digite o terceiro valor");
+        c = grava.nextInt();
+        while( cont < 1000){
+        if( a > b){
+            t = a; 
+            a = b;
+            b = t;
+        }else if( b > c){
+            t = b; 
+            b= c;
+            c = t;
+        }
+        cont++;
+        }
+        System.out.println(a + "  " + b + " " + c);
+    }
+}

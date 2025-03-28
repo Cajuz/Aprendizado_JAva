@@ -1,0 +1,38 @@
+package main;
+
+import java.util.Scanner;
+
+
+public class Main {
+
+    
+    public static void main(String[] args) {
+        Scanner grava = new Scanner(System.in);
+         int x=1, y=1, alunos=0, media = 0, idade= 0, mtotal=0;
+        String sexo;
+        int resp;
+          while (x==1){
+              System.out.println("Quer executar o programa?"
+                      + "\n Digite 1 para executar ou 2 para encerrar");
+                  resp = grava.nextInt();
+                  
+                  if(resp == 1){
+                      y=y-1;
+                      while(y ==0){
+                          y=y+1;
+                        System.out.println("Qual seu sexo? \n "
+                        +          "(M)Masculino    (F)Feminino \n"
+                        +          "          (O)Outro       ");
+                         sexo = grava.next();
+                           if (sexo.equals("m") || sexo.equals("M")){
+                                                           mtotal++;}
+
+         } }
+                  else if(resp ==2){
+              System.out.println("Total de pessoas do sexo masculino: " +mtotal);
+      x=x+2;
+          }
+        
+    }
+}
+    }

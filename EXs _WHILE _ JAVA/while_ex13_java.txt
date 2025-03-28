@@ -1,0 +1,35 @@
+package main;
+
+import java.util.Scanner;
+
+
+public class Main {
+
+    
+    public static void main(String[] args) {
+        Scanner grava = new Scanner(System.in);
+        int n=0,idade=0, x=0;
+        String nome, sexo;
+                      
+     
+            while(n<=20){
+                System.out.println("Digite seu nome:");
+                         nome = grava.next();
+                System.out.println("Digite sua idade:");
+                         idade = grava.nextInt();
+                System.out.println("Qual seu sexo? \n "
+                        +          "(M)Masculino    (F)Feminino \n"
+                        +          "          (O)Outro       ");
+                         sexo = grava.next();
+                if(idade > 21 && sexo.equals("m") || sexo.equals("M")){
+                     System.out.println("Alcança os critérios: "+nome);
+            }
+                         
+              n++;           
+            }
+            
+          
+         
+           
+    }
+}

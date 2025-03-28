@@ -1,0 +1,28 @@
+
+package main;
+
+import java.util.Random;
+import java.util.Scanner;
+
+
+public class Main {
+/*Gerar 20 números de 1000 a 1999 e escrever aqueles
+que divididos por 11 dão um resto igual a 5.*/
+ 
+  
+    public static void main(String[] args) {
+       Random gera = new Random();
+       int val1=1, cont=10, soma=0;
+      
+      for (cont=1; cont <=20; cont++){
+     
+    int valor =  gera.nextInt(999)+1000;
+        System.out.println("nº"+cont+"= "+valor);
+    
+        if(valor %11 == 5){System.out.println("Esse número atende a condição \n Vou contabilizar= " + valor);} 
+        else {System.out.println("Esse número NÂO atende a condição\n não vou contabilizar"); 
+        soma++;}
+     }
+    }
+    
+}

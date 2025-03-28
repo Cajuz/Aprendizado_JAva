@@ -1,0 +1,16 @@
+package main;
+
+
+public class Main {
+
+    
+    public static void main(String[] args) {
+        int valor= 100;
+        
+        while(valor < 200){
+            if(valor  %  2 != 0 ){
+                System.out.println(valor);}
+        valor= valor + 1;    
+        }       
+    }
+}

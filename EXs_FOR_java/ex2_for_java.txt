@@ -1,0 +1,25 @@
+
+package main;
+
+import java.util.Scanner;
+
+
+public class Main {
+//Ler 4 números inteiros e calcular a soma dos que forem par.
+  
+    public static void main(String[] args) {
+       Scanner input = new Scanner(System.in);
+       int val1=1, cont=1, somapar=0;
+       
+     for (cont=1; cont <=4; cont++){
+     System.out.println("Digite o valor do numero inteiro " + cont);
+                  val1 = input.nextInt();
+        if(val1 % 2 == 0){System.out.println("Esse número é par \n vou contabilizar");
+        somapar= somapar + val1;
+        } 
+        else {System.out.println("Esse número é ímpar"); }
+     }
+    System.out.println("A soma de todos números pares digitados é: " + somapar);
+    }
+    
+}

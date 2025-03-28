@@ -1,0 +1,36 @@
+package main;
+
+import java.util.Scanner;
+
+
+public class Main {
+
+    
+    public static void main(String[] args) {
+        Scanner grava = new Scanner(System.in);
+        int n1=0,n2=0,n3=0,x=0;
+        System.out.println("Digite um numero");
+                         n1 = grava.nextInt();
+        System.out.println("Digite outro");
+                         n2 = grava.nextInt();
+        System.out.println("Digite o ultimo");
+                         n3 = grava.nextInt();
+        
+        while(n1<n2 && n1<n3 && x==0){
+            if (n2<n3){System.out.println("\n"+ n1+"\n"+n2+"\n"+n3);}
+            else{System.out.println("\n"+n1+"\n"+n3+"\n"+n2);}
+            x++;
+        }
+         while(n2<n1 && n2<n3 && x==0){
+             if (n3<n1){System.out.println(n2+"\n"+n3+"\n"+n1);}
+             else{System.out.println("\n"+n2+"\n"+n1+"\n"+n3);}
+             x++;
+         }
+          while(n3<n2 && n3<n1 && x==0){
+              if (n2<n1){System.out.println("\n"+n3+"\n"+n2+"\n"+n1);}
+              else{System.out.println("\n"+n3+"\n"+n1+"\n"+n2);}
+              x++;
+          }
+           
+    }
+}

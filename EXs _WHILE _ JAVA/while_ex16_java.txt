@@ -1,0 +1,25 @@
+package main;
+
+import java.util.Scanner;
+
+
+public class Main {
+
+    
+    public static void main(String[] args) {
+        Scanner grava = new Scanner(System.in);
+        int ano=0, x=0 ;
+        float Maria= (float) 1.10 , João= (float) 1.50;
+        
+            while(Maria < João){
+             João= (float) João + 0.02;
+             Maria= (float) Maria + 0.03;
+            ano++;
+            }
+            
+            System.out.println("Maria demoraria "+ano+" anos para ultrapassar joão em altura"
+                    + "\n João estaria com "+João+" metros e Maria com "+Maria+ " metros");
+         
+           
+    }
+}

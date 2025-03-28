@@ -1,0 +1,17 @@
+package main;
+
+
+public class Main {
+
+    
+    public static void main(String[] args) {
+        int valor= 100;
+        
+        while(valor <=100 && valor >=0){
+  
+               if(valor % 4 ==0) { System.out.println(valor);}
+           valor--;
+        }       
+    }
+}
+

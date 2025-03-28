@@ -1,0 +1,21 @@
+package main;
+
+import java.util.Scanner;
+
+
+public class Main {
+
+    
+    public static void main(String[] args) {
+          Scanner grava = new Scanner(System.in);
+          int x=1, test=0;
+       System.out.println("Quantas vezes imprimir a mensagem?");
+      test = grava.nextInt();
+        
+        while(x <= test){
+            x= x + 1;  
+                System.out.println("Isso é um teste deve aparecer na tela");
+          
+        }       
+    }
+}
