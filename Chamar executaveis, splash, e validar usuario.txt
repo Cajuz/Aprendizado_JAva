@@ -1,0 +1,70 @@
+ // Codigo de tela de Splash, barra e mensagem
+new Thread(){
+        
+            public void run() {
+        
+        
+        for (int i=0; i<101; i++){
+                    try {
+                        sleep(60); 
+                        
+                        progress.setValue(i);
+                        
+                        if(progress.getValue() == 10){
+                        
+                            mensagem.setText("Fazendo a conexao com o banco de dados");
+                            driver_conexao.carregardriver();
+                            sleep(2000);
+                                                       
+                        
+                        }else if (barra.getValue() <=30){
+                            mensagem.setText("Carregando o sistema");
+                          sleep(100);  
+                        } else if (progress.getValue() <=99){
+                            mensagem.setText("Carregamento quase completo");
+                            
+                        }else{
+                            mensagem.setText("Carregamento completo. Seu programa sera iniciado.");
+                        
+                        sleep(3000);
+                        
+                        //new Tela1().setVisible(true);
+                        }
+                        
+                        
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(Splash_GUI.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+        
+        
+        
+        
+        }        
+        }
+        
+        }.start();
+        
+    }
+
+//Validar usuario e entrar
+ private void entrar_btnActionPerformed(java.awt.event.ActionEvent evt) {                                           
+        String login1 = login_txt.getText();
+        String senha1 = senha_txt.getText();
+        
+        if(login1.equalsIgnoreCase("Sonic") && senha1.equals("69")){
+            new inicio().setVisible(true);
+            this.dispose();
+        }else{
+            JOptionPane.showMessageDialog(null, "Usuario ou ");
+        }
+    }      
+
+//Menu que abre e executa outro executaveis
+private void calculadora_btnActionPerformed(java.awt.event.ActionEvent evt) {                                                
+        try {
+            Runtime.getRuntime().exec("cmd.exe /c start calc.exe ") ;
+        } catch (IOException ex) {
+            JOptionPane.showMessageDialog(null,"ERROR001 \n Calculadora não encontrada");
+        }
+
+    }                         
